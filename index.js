@@ -26,16 +26,18 @@ async function fetchCharacters() {
 }
 
 function createCard(data) {
-  const characters = data;
-  characters.results.forEach((character) => {
-    // results löschen
-    CharacterCard(
-      character.image,
+  const characters = data.results;
+  console.log(characters);
+  characters.forEach((character) => {
+    console.log("hallo");
+
+    CharacterCard();
+
+    /* character.image,
       character.name,
       character.status,
       character.type,
-      character.episode.length
-    );
+      character.episode.length */
   });
 }
 
