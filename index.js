@@ -28,34 +28,16 @@ async function fetchCharacters() {
 function createCard(data) {
   const characters = data.results;
   console.log(characters);
+
   characters.forEach((character) => {
-    console.log("hallo");
-
-    CharacterCard();
-
-    /* character.image,
+    CharacterCard(
+      character.image,
       character.name,
       character.status,
       character.type,
-      character.episode.length */
+      character.episode
+    );
   });
 }
-
-//// characters.forEach((character) => {
-/// CharacterCard(
-/*   character.image,
-  character.name,
-  character.status,
-  character.type,
-  character.episode.length
-);}) */
-
-// console.log(
-//   CharacterCard(
-//     "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
-//     "Rick Sanchez",
-//     "hallo"
-//   )
-// );
 
 fetchCharacters();
